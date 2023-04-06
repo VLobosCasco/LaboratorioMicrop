@@ -8,6 +8,7 @@ int main()
     int A, B, C;
     int CantRaices;
     float Raiz1, Raiz2;
+    float real_p, img_p;
 
     printf("Ingresar los coeficientes de un polinomio de grado 2:\n");
 
@@ -21,10 +22,14 @@ int main()
     CantRaices = cant_roots(A, B, C);
     value_roots(A, B, C, CantRaices, &Raiz1, &Raiz2);
 
+    if (CantRaices == 0)
+    {
+        imaginary_value_roots(A, B, C, &real_p, &img_p);
+    }
 
     switch (CantRaices) {
     case 0:
-        printf("El polinomio no tiene raices reales\n");
+        printf("El polinomio tiene raices imaginarias: %f + j %f\n", real_p,img_p);
         break;
     case 1:
         printf("El polinomio tiene una raiz real: %f\n", Raiz1);

@@ -3,12 +3,12 @@
 int cant_roots(int a, int b, int c)
 {
     int Cant;
-    float raiz = (b * b) - (4 * a * c);
+    float Discriminante = (b * b) - (4 * a * c);
 
-    if (raiz == 0) {
+    if (Discriminante == 0) {
         Cant = 1;
     }
-    else if (raiz < 0) {
+    else if (Discriminante < 0) {
         Cant = 0;
     }
     else {
@@ -33,4 +33,11 @@ void value_roots(int a, int b, int c, int cant_roots, float* root1, float* root2
         *root2 = (-b - sqrt(discriminante)) / (2.0 * a);
     }
 
+}
+void imaginary_value_roots(int a, int b, int c, float* real_p, float* img_p) {
+
+    float discriminante = b * b - 4 * a * c;
+    *real_p = -b / (2.0 * a);
+    *img_p = sqrt(-discriminante) / (2.0 * a);
+ 
 }
