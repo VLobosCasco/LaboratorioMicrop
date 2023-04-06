@@ -50,6 +50,16 @@ int main()
     y = value_depend(A, B, C, x);
     printf("El valor de la variable dependiente es y: %f\n", y);
 
+    // Inciso 1 e) ----------------------------------------------------------------
+    printf("Ingrese la variable Dependiente Y para calcular la Independiente X:\n");
+    scanf_s("%f", &y);
+
+    x = value_independ(A, B, C, y);
+    if (x != -1)
+    {
+        printf("El valor de la variable dependiente es y: %f\n", x);
+    }
+
     return 0;
 }
 
