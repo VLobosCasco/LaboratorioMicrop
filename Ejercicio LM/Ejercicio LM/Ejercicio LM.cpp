@@ -45,6 +45,7 @@ int main()
 
         case 'b':
             //Inciso 1 b) ----------------------------------------------------------------
+            CantRaices = cant_roots(A, B, C);
             value_roots(A, B, C, CantRaices, &Raiz1, &Raiz2);
 
             //Inciso 1 c) ----------------------------------------------------------------
